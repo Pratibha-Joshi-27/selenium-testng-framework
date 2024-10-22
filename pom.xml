@@ -22,6 +22,7 @@
         <log4j.version>1.2.17</log4j.version> <!-- Keep Log4j version -->
         <slf4j.version>1.7.32</slf4j.version> <!-- Keep SLF4J version -->
         <simpleJavaMail.version>5.1.1</simpleJavaMail.version> <!-- Keep Simple Java Mail version -->
+        <lombok.version>1.18.26</lombok.version> <!-- Added Lombok version -->
     </properties>
 
     <dependencies>
@@ -73,6 +74,13 @@
             <artifactId>webdrivermanager</artifactId>
             <version>${webdriver.version}</version>
         </dependency>
+        <!-- Lombok for code generation -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope> <!-- Lombok is only needed at compile time -->
+        </dependency>
     </dependencies>
 
     <build>
@@ -96,6 +104,8 @@
                     <target>11</target>
                     <compilerArgs>
                         <arg>-Xlint:deprecation</arg> <!-- Enable warnings for deprecated APIs -->
+                        <arg>--add-opens</arg>
+                        <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg> <!-- Open access to necessary classes -->
                     </compilerArgs>
                 </configuration>
             </plugin>
