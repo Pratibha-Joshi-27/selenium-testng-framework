@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>example</groupId>
@@ -15,6 +15,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source> <!-- Updated to Java 11 -->
         <maven.compiler.target>11</maven.compiler.target> <!-- Updated to Java 11 -->
+        <webdriver.version>5.6.0</webdriver.version> <!-- Latest WebDriverManager version -->
+        <selenium.version>4.21.0</selenium.version> <!-- Updated to the latest Selenium version -->
+        <testng.version>7.7.0</testng.version> <!-- Updated TestNG to the latest stable version -->
+        <extentReports.version>5.0.8</extentReports.version> <!-- Updated ExtentReports version -->
+        <log4j.version>1.2.17</log4j.version> <!-- Keep Log4j version -->
+        <slf4j.version>1.7.32</slf4j.version> <!-- Keep SLF4J version -->
+        <simpleJavaMail.version>5.1.1</simpleJavaMail.version> <!-- Keep Simple Java Mail version -->
     </properties>
 
     <dependencies>
@@ -22,49 +29,49 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>3.141.59</version>
+            <version>${selenium.version}</version>
         </dependency>
         <!-- TestNG -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>6.14.3</version>
+            <version>${testng.version}</version>
             <scope>test</scope>
         </dependency>
         <!-- ExtentReports -->
         <dependency>
-            <groupId>com.relevantcodes</groupId>
+            <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
-            <version>2.41.2</version>
+            <version>${extentReports.version}</version>
         </dependency>
         <!-- Log4j for logging -->
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
-            <version>1.2.17</version> <!-- Add Log4j dependency -->
+            <version>${log4j.version}</version>
         </dependency>
         <!-- SLF4J -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.32</version>
+            <version>${slf4j.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.32</version>
+            <version>${slf4j.version}</version>
         </dependency>
         <!-- Simple Java Mail -->
         <dependency>
             <groupId>org.simplejavamail</groupId>
             <artifactId>simple-java-mail</artifactId>
-            <version>5.1.1</version>
+            <version>${simpleJavaMail.version}</version>
         </dependency>
         <!-- WebDriverManager for managing browser drivers -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>4.3.1</version>
+            <version>${webdriver.version}</version>
         </dependency>
     </dependencies>
 
